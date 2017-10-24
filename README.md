@@ -3,7 +3,7 @@ Dating app
 -----------------------
 ## Levi - Vistor
 ## Levi - Login
-## Levi - Pegister
+## Levi - Register
 ###	     -random name generator
 ###       -password
 ###       -a/s/l
