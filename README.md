@@ -7,7 +7,7 @@ Dating app
 ###	     -random name generator
 ###       -password
 ###       -a/s/l
-## User Profile
+## Cristina-User Profile
 ###	  -questionair
 ###	  -age pref
 ###	  -location pref
