@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css?family=Voltaire');
+@import url('https://fonts.googleapis.com/css?family=Tangerine');
+@import url('https://fonts.googleapis.com/css?family=Macondo');
+@import url('https://fonts.googleapis.com/css?family=Satisfy');
+
+/*----------------------Navigation--------------------------*/
+.navbar {
+    border-radius: 0;
+}
+.navbar-brand{
+    font-family: "Satisfy", "Times New Roman", Serif;
+}
+.navbar-center {
+    padding-left: 7em;
+}
+.navbar-fixed-side {
+    color: white;
+    border: 8px groove silver;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.navbar-fixed-side {
+    height:calc(100vh - 110px);
+}
+.navbar-fixed-side > a, a:visited, a:hover, a:active {
+  color: inherit;
+}
+.navbar-fixed-side_right {
+    /*height:calc(100vh - 110px);*/
+    color: white;
+    text-align: center;
+}
+.navbar-fixed-side_right .glyphicon {
+    padding-top: 10px;
+    font-size: 50px;
+}
+/*----------------------Header------------------------------*/
+.header1 {
+    font-size: 200%;
+    text-align: center;
+}
+.recipe_text {
+    z-index: -1;
+    padding: 0;
+    color: black;
+    max-height: 100%;
+    min-height: 100%;
+    text-overflow: clip;
+}
+.text-left {
+    position: absolute;
+    top: 2em;
+    left: 3em;
+    width: 45%;
+
+    /*background-color: #000;*/
+    /*color: #fff;*/
+    /*opacity: 0.5;*/
+    /*filter: alpha(opacity=50);*/
+}
+.text-left ul li a {
+    list-style:square;
+    color: black;
+    text-decoration: none;
+}
+.text-right {
+    position: absolute;
+    text-align: left;
+    top: 2em;
+    right: 3em;
+    width: 45%;
+    padding-left: 1em;
+
+    background-color: #000;
+    color: #fff;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+/*------------------------Body------------------------------*/
+body {
+    background: #E1D6A9;
+    font-family: "Voltaire", "Times New Roman", Serif;
+}
+hr {
+    border-color: black;
+    border-top: 3px solid
+}
+/*----------------------Carousels--------------------------*/
+.carousel {
+    height: 96px;
+    width: 170px;
+    left:2px;
+    top: 2px;
+    right: 2px;
+    padding-left: 2em;
+}
+.carousel2 {
+    height: 96px;
+    width: 170px;
+    left:2px;
+    top: 2px;
+    right: 2px;
+    transform: rotate(-10deg);
+}
+.carousel3 {
+    height: 96px;
+    width: 170px;
+    left:2px;
+    top: 2px;
+    right: 2px;
+    transform: rotate(15deg);
+}
+.carousel4 {
+    height: 96px;
+    width: 170px;
+    left:2px;
+    top: 2px;
+    right: 2px;
+}
+.carousel-inner > .item > img {
+    width:200px;
+    height: 96px;
+    border: 15px ridge saddlebrown;
+}
+/*-------------------------Into-----------------------------*/
+.intro {
+    padding-top: 5em;
+    margin-left: 5em;
+    margin-right: 5em;
+    line-height: 120%;
+}
+/*------------------------Footer----------------------------*/
+footer {
+    margin-top: 2em;
+    margin-left: 2em;
+    margin-right: 2em;
+    border-top: black 1px solid;
+    padding-right: 2em;
+    font-size: 150%;
+    text-align: right;
+    color: black;
+    font-family: "Tangerine", "Times New Roman", Serif;
+}
