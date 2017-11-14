@@ -18,9 +18,17 @@ from django.conf.urls import include, url
 from django.conf import settings
 from django.conf.urls.static import static
 
+
 urlpatterns = [
+    # Main Home Visitor page
     url(r'^', include('home.urls')),
+
+    # Admin backend
     url(r'^admin/', admin.site.urls),
+
+    # User auth urls
+    # url(r'^register/$', views.UserFormRegisterView.as_view(), name='register'),
+    # url(r'^login/$', views.UserFormLoginView.as_view(), name='login'),
 ]
 
 if settings.DEBUG:
