@@ -23,8 +23,12 @@ urlpatterns = [
     # Main Home Visitor page
     url(r'^', include('home.urls')),
 
+    # Profiles page
+    url(r'^userProfiles/', include('userProfiles.urls')),
+
     # Admin backend
     url(r'^admin/', admin.site.urls),
+
 
     # User auth urls
     # url(r'^register/$', views.UserFormRegisterView.as_view(), name='register'),
