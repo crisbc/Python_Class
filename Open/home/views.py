@@ -5,4 +5,6 @@ from django.shortcuts import render
 
 
 def index(request):
-    return render(request, 'home/home.html')
+    template = 'home/home.html'
+    context = {}
+    return render(request, template, context)
