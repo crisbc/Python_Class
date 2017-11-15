@@ -28,7 +28,8 @@ urlpatterns = [
 
     # User auth urls
     # url(r'^register/$', views.UserFormRegisterView.as_view(), name='register'),
-    # url(r'^login/$', views.UserFormLoginView.as_view(), name='login'),
+    url(r'^accounts/', include('accounts.urls', app_name='accounts', namespace='accounts')),
+
 ]
 
 if settings.DEBUG:
