@@ -11,13 +11,23 @@
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
     </head>
+<header>
 
-<div class="text-center">
-            <img src="Open/static/images/open2.png">
-        </div>
+    {% include 'userInfo.html' %}
+</header>
 <body>
-{% include 'authenticated_navbar.html' %}
-{% include 'userInfo.html' %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+
+        </div>
+        <div class="col-md-2">
+            {% include 'authenticated_navbar.html' %}
+
+        </div>
+    </div>
+</div>
+
 </body>
 
 </html>
