@@ -1,8 +1,8 @@
-<div class="container-fluid bg-1" style="background-color:WhiteSmoke ;" >
+<div class="container-fluid" style="background-color:WhiteSmoke ;" >
   <div class="row ">
     <div class="col-sm-6">
                     <div class="text-center" >
-                        <img src="../static/images/generic.png" class="img-circle" alt="Generic pic" width="300" height="300" >
+                        <img src="../../static/images/generic.png" class="img-circle" alt="Generic pic" width="300" height="300" >
                     </div>
                 <div class="text-center">
 				<div class="rating-block">
@@ -33,41 +33,15 @@
             <h4><strong>Age: </strong>Placeholder</h4>
             <h4><strong>Email:</strong>{{user.email}}</h4>
 
-            <a href="{% url 'edit_userinfo' %}" class="btn btn-info" role="button">Edit</a>
+            <a href="{% url 'userProfiles:edit_userinfo' %}" class="btn btn-info" role="button">Edit</a>
         </div>
     </div>
   </div>
 </div>
-<div class="container-fluid bg-1">
-   <div class="row">
-       <div class="col-sm-10">
-  <h3>My Interests</h3>
-  <table class="table">
-    <thead>
-      <tr>
-        <th></th>
-        <th></th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Placerholder</td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-</div>
-</div>
 
-<div class="container">
+
+
+<div class="container-fluid">
     <button type="button" class="btn btn-success" data-toggle="modal" data-target="#popUpWindow"> Hello modal</button>
 
     <div class="modal fade" id="popUpWindow">
@@ -84,7 +58,6 @@
                      {% for post in posts %}
                         <h4>{{ post }}</h4> <br>
                      {% endfor %}
-
 
                 </div>
 

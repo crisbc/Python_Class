@@ -6,4 +6,5 @@ urlpatterns = [
     url(r'^login/$', auth_views.login, name='login'),
     url(r'^logout/$', auth_views.logout, {'next_page': 'accounts:login'}, name='logout'),
 
+
 ]

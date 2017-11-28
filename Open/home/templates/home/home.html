@@ -12,11 +12,12 @@
     </head>
 
     <body>
-    {% if user.is_authenticated %}
+    {% include 'visitor_navbar.html' %}
+   <!-- {% if user.is_authenticated %}
         {% include 'authenticated_navbar.html' %}
     {% else %}
         {% include 'visitor_navbar.html' %}
-    {% endif %}
+    {% endif %}-->
 
         <div class="text-center">
             <img src="static/images/Open500x375.png">

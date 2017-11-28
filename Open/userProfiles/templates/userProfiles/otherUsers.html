@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
         <meta charset="UTF-8">
-        <title>{%  block title %}Home{% endblock %}</title>
+        <title>{%  block title %}Users{% endblock %}</title>
         {% load static %}
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
        <link rel="stylesheet" href="{% static 'css/style.css' %}">
@@ -11,32 +11,31 @@
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
     </head>
-<header>
 
-
-</header>
-<body>
+<title>Browse</title>
+ {% block body %}
 
 {%include 'visitor_navbar.html'%}
-
 <div class="container-fluid">
     <div class="row">
-        <div class="col-md-10">
-{% include 'userInfo.html' %}
- {% include 'interestsTable.html' %}
-        </div>
+        <div class="col-md-1">
+             <h3>Browse Users</h3>
+    {% for user in users%}
+        <a href="{% url 'userProfiles:other_users_with_pk' pk=user.pk %}">
+        <h3>{{user.username}}</h3>
+    </a>
+    {% endfor %}
 
+
+        </div>
+        <div class="col-md-9">
+        {% include 'userInfo.html' %}
+        </div>
         <div class="col-md-2">
 {% include 'profileSideNav.html' %}
 
         </div>
-
     </div>
-
 </div>
-
-
-
-</body>
-
+{% endblock %}
 </html>

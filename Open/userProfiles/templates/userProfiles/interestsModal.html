@@ -1,41 +1,42 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
+        <meta charset="UTF-8">
+        <title>{%  block title %}Interests{% endblock %}</title>
+        {% load static %}
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+       <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/userProfiles.css' %}">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    </head>
 <body>
+{%include 'visitor_navbar.html'%}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-10 text-center">
 {% block content %}
     <h1>What are your Interests?</h1>
-    <form method="POST" class="post-form">{% csrf_token %}
+    <form action="{% url 'userProfiles:post_new' %}" method="POST" class="post-form">
+        {% csrf_token %}
         {{ form }}
-        <button type="submit" class="save btn btn-default">Submit</button>
+        <br><button type="submit" class="save btn btn-default">Submit</button>
     </form>
-{% endblock %}
 
-<p>Elbow</p>
-{% for value, text in form.Interests.field.choices %}
-    {{ text }}
-<button type="submit" class="save btn btn-default">Submit</button>
-{% endfor %}
 
-<ul>
-  <li><input type="radio" name="form" ></li>
-  {{form}}
-</ul>
-<h1>Hello hello </h1>
-<form action="{% url 'post_new' %}" method="POST">
-    {% csrf_token %}
-    {%for userInterest in userInterests_set.all%}
-    <input type="radio" id="userInterests{{forloop.counter}}" name="userInterests" value="{{userInterests.id}}">
-    <label for ="userInterests{{forloop.counter}}">
-            {{Interests.userInterests}}
-            {% if userInterests.chosen_Interests%}
-                <P>Picked</P>
-            {% endif %}
-    </label>
-    {% endfor %}
-</form>
+        </div>
+
+        <div class="col-md-2">
+{% include 'profileSideNav.html' %}
+
+        </div>
+
+    </div>
+
+</div>
 
 </body>
+{% endblock %}
 </html>

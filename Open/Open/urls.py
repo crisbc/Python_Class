@@ -24,7 +24,7 @@ urlpatterns = [
     url(r'^', include('home.urls')),
 
     # Profiles page
-    url(r'^userProfiles/', include('userProfiles.urls')),
+    url(r'^userProfiles/', include('userProfiles.urls', namespace='userProfiles')),
 
     # Admin backend
     url(r'^admin/', admin.site.urls),
