@@ -29,11 +29,12 @@ urlpatterns = [
     # Admin backend
     url(r'^admin/', admin.site.urls),
 
+    #Requests page
+    url(r'^requests/', include('requests.urls', app_name='requests', namespace='requests')),
 
     # User auth urls
     # url(r'^register/$', views.UserFormRegisterView.as_view(), name='register'),
     url(r'^accounts/', include('accounts.urls', app_name='accounts', namespace='accounts')),
-
 ]
 
 if settings.DEBUG:
