@@ -8,7 +8,7 @@ Dating app
 ###       -password
 ###       -a/s/l
 ## Cristina-User Profile
-###	  -questionair
+###	  -questionaire
 ###	  -age pref
 ###	  -location pref
 ###	  -m/f pref		
@@ -21,4 +21,7 @@ Dating app
 ###	  -ask date
 ### 	-reply date
 ###	  -rate date
-## message
+## Jackie-Messages
+	-send and recieve messages from dates
+
+
