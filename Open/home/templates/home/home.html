@@ -6,19 +6,16 @@
         {% load static %}
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
        <link rel="stylesheet" href="{% static 'css/style.css' %}">
-       <link rel="stylesheet" href="{% static 'css/signin.css' %}">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     </head>
 
     <body>
-    {% include 'visitor_navbar.html' %}
-   <!-- {% if user.is_authenticated %}
+    {% if user.is_authenticated %}
         {% include 'authenticated_navbar.html' %}
     {% else %}
         {% include 'visitor_navbar.html' %}
-    {% endif %}-->
-
+    {% endif %}
         <div class="text-center">
             <img src="static/images/Open500x375.png">
         </div>
