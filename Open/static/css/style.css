@@ -85,42 +85,14 @@ hr {
     border-color: black;
     border-top: 3px solid
 }
-/*----------------------Carousels--------------------------*/
-.carousel {
-    height: 96px;
-    width: 170px;
-    left:2px;
-    top: 2px;
-    right: 2px;
-    padding-left: 2em;
-}
-.carousel2 {
-    height: 96px;
-    width: 170px;
-    left:2px;
-    top: 2px;
-    right: 2px;
-    transform: rotate(-10deg);
-}
-.carousel3 {
-    height: 96px;
-    width: 170px;
-    left:2px;
-    top: 2px;
-    right: 2px;
-    transform: rotate(15deg);
-}
-.carousel4 {
-    height: 96px;
-    width: 170px;
-    left:2px;
-    top: 2px;
-    right: 2px;
-}
-.carousel-inner > .item > img {
-    width:200px;
-    height: 96px;
-    border: 15px ridge saddlebrown;
+div.requests{
+    border-color: black;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-right: 1px solid;
+    border-left: 1px solid;
+    height:calc(100vh - 110px);
+    background-color: whitesmoke;
 }
 /*-------------------------Into-----------------------------*/
 .intro {
@@ -151,7 +123,6 @@ footer {
   background-color: rgb(35, 34, 59);
   top: 60px;
 }
-
 .sidenav a {
     padding: 8px 8px 8px 8px;
     text-decoration: none;
@@ -160,11 +131,9 @@ footer {
     display: block;
     transition: 0.3s;
 }
-
 .sidenav a:hover {
     color: #f1f1f1;
 }
-
 /*--------------------Rating stars -----------------------------*/
 .rating-block{
 	border:none;

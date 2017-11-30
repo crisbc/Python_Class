@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+    <head>
         <meta charset="UTF-8">
         <title>{%  block title %}Users{% endblock %}</title>
         {% load static %}
@@ -11,31 +11,23 @@
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
     </head>
-
-<title>Browse</title>
- {% block body %}
-
-{%include 'navbar.html'%}
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-1">
-             <h3>Browse Users</h3>
-    {% for user in users%}
-        <a href="{% url 'userProfiles:other_users_with_pk' pk=user.pk %}">
-        <h3>{{user.username}}</h3>
-    </a>
-    {% endfor %}
-
-
+    <body>
+        <title>Browse</title>
+        {% block body %}
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-2">
+                    {% for user in matchedUsers %}
+                        <a href="{% url 'userProfiles:other_users_with_pk' pk=user.pk %}">
+                        <h3>{{user.username}}</h3>
+                        </a>
+                    {% endfor %}
+                </div>
+                <div class="col-md-10">
+                    {% include 'userInfo.html' %}
+                </div>
+            </div>
         </div>
-        <div class="col-md-9">
-        {% include 'userInfo.html' %}
-        </div>
-        <div class="col-md-2">
-{% include 'profileSideNav.html' %}
-
-        </div>
-    </div>
-</div>
-{% endblock %}
+        {% endblock %}
+    </body>
 </html>

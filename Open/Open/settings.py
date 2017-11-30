@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'home',
     'accounts',
     'userProfiles',
+    'requests',
 ]
 
 MIDDLEWARE = [
@@ -126,7 +127,7 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
 
-#accounts
-LOGIN_REDIRECT_URL = 'home'
+# accounts
+LOGIN_REDIRECT_URL = '/userProfiles/'
 
-# LOGOUT_REDIRECT_URL = 'home/home.html'
+LOGOUT_REDIRECT_URL = '/home/'
