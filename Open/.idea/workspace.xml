@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e494b662-49d3-453e-a839-383f56ef9f6b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/accounts/urls.py" afterPath="$PROJECT_DIR$/accounts/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/home/templates/home/home.html" afterPath="$PROJECT_DIR$/home/templates/home/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/signin.css" afterPath="$PROJECT_DIR$/static/css/signin.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/authenticated_navbar.html" afterPath="$PROJECT_DIR$/templates/authenticated_navbar.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Open/settings.py" afterPath="$PROJECT_DIR$/Open/settings.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/visitor_navbar.html" afterPath="$PROJECT_DIR$/templates/visitor_navbar.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,12 +15,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="signin.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/static/css/signin.css">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Open/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="552">
-              <caret line="41" column="19" lean-forward="false" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="19" />
+            <state relative-caret-position="556">
+              <caret line="131" column="0" lean-forward="true" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="visitor_navbar.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/visitor_navbar.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="25" column="21" lean-forward="true" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+              <folding>
+                <element signature="e#1123#1129#0" expanded="true" />
+                <element signature="e#1555#1561#0" expanded="true" />
+                <element signature="e#1799#1805#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -36,12 +47,13 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/templates/visitor_navbar.html" />
         <option value="$PROJECT_DIR$/templates/authenticated_navbar.html" />
         <option value="$PROJECT_DIR$/home/templates/home/home.html" />
         <option value="$PROJECT_DIR$/templates/registration/login.html" />
         <option value="$PROJECT_DIR$/accounts/urls.py" />
         <option value="$PROJECT_DIR$/static/css/signin.css" />
+        <option value="$PROJECT_DIR$/Open/settings.py" />
+        <option value="$PROJECT_DIR$/templates/visitor_navbar.html" />
       </list>
     </option>
   </component>
@@ -81,30 +93,12 @@
             <path>
               <item name="Open" type="b2602c69:ProjectViewProjectNode" />
               <item name="Open" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Open" type="b2602c69:ProjectViewProjectNode" />
               <item name="Open" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Open" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Open" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Open" type="b2602c69:ProjectViewProjectNode" />
               <item name="Open" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Open" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Open" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="registration" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -215,21 +209,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/visitor_navbar.html">
+    <entry file="file://$PROJECT_DIR$/static/css/signin.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="15" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-          <folding>
-            <element signature="e#1122#1128#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="586">
+          <caret line="43" column="1" lean-forward="true" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/signin.css">
+    <entry file="file://$PROJECT_DIR$/Open/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="41" column="19" lean-forward="false" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="19" />
+        <state relative-caret-position="556">
+          <caret line="131" column="0" lean-forward="true" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/visitor_navbar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="25" column="21" lean-forward="true" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+          <folding>
+            <element signature="e#1123#1129#0" expanded="true" />
+            <element signature="e#1555#1561#0" expanded="true" />
+            <element signature="e#1799#1805#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
