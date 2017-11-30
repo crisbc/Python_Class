@@ -12,12 +12,7 @@
     </head>
 
     <body>
-        {% if user.is_authenticated %}
-            {% include 'authenticated_navbar.html' %}
-        {% else %}
-            {% include 'visitor_navbar.html' %}
-        {% endif %}
-
+        {% include 'navbar.html' %}
         {% block body %}
         <div class="container-fluid">
             <div class="row">
