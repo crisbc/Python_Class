@@ -14,20 +14,15 @@
         {%include 'navbar.html'%}
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-2">
-                    <div class="requests">
-                        <h1>Requests</h1>
-                        {% for user in matchedUsers %}
-                        <a href="{% url 'userProfiles:other_users_with_pk' pk=user.pk %}">
-                            <h2>user.username</h2></a>
-                        {% endfor %}
-                    </div>
-                </div>
-                <div class="col-md-8">
-                    <div class="requests">
-                        {% include 'profilePreview.html' %}
-                        
-                    </div>
+                <div class="col-md-10">
+                    <form method="post">
+                        {% csrf_token %}
+                        {{ form.as_p}}
+                        Enter time of date: <input type="datetime-local" name="dateTime"> <br>
+                        Enter date event: <input type="text" name="event"> <br>
+                        Enter date location: <input type="text" name="location"> <br>
+                        <button type="submit">Submit</button>
+                    </form>
                 </div>
                 <div class="col-md-2">
                     {% include 'profileSideNav.html' %}

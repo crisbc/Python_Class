@@ -85,6 +85,15 @@ hr {
     border-color: black;
     border-top: 3px solid
 }
+div.requests{
+    border-color: black;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-right: 1px solid;
+    border-left: 1px solid;
+    height:calc(100vh - 110px);
+    background-color: whitesmoke;
+}
 /*-------------------------Into-----------------------------*/
 .intro {
     padding-top: 5em;

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>{%  block title %}Users{% endblock %}</title>
+        {% load static %}
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+       <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/userProfiles.css' %}">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    </head>
+    <body>
+        <title>Browse</title>
+        {% block body %}
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-2">
+                    {% for user in matchedUsers %}
+                        <a href="{% url 'userProfiles:other_users_with_pk' pk=user.pk %}">
+                        <h3>{{user.username}}</h3>
+                        </a>
+                    {% endfor %}
+                </div>
+                <div class="col-md-10">
+                    {% include 'userInfo.html' %}
+                </div>
+            </div>
+        </div>
+        {% endblock %}
+    </body>
+</html>
