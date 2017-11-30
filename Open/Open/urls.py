@@ -29,7 +29,7 @@ urlpatterns = [
     # Admin backend
     url(r'^admin/', admin.site.urls),
 
-    #Requests page
+    # Requests page
     url(r'^requests/', include('requests.urls', app_name='requests', namespace='requests')),
 
     # User auth urls

@@ -85,43 +85,6 @@ hr {
     border-color: black;
     border-top: 3px solid
 }
-/*----------------------Carousels--------------------------*/
-.carousel {
-    height: 96px;
-    width: 170px;
-    left:2px;
-    top: 2px;
-    right: 2px;
-    padding-left: 2em;
-}
-.carousel2 {
-    height: 96px;
-    width: 170px;
-    left:2px;
-    top: 2px;
-    right: 2px;
-    transform: rotate(-10deg);
-}
-.carousel3 {
-    height: 96px;
-    width: 170px;
-    left:2px;
-    top: 2px;
-    right: 2px;
-    transform: rotate(15deg);
-}
-.carousel4 {
-    height: 96px;
-    width: 170px;
-    left:2px;
-    top: 2px;
-    right: 2px;
-}
-.carousel-inner > .item > img {
-    width:200px;
-    height: 96px;
-    border: 15px ridge saddlebrown;
-}
 /*-------------------------Into-----------------------------*/
 .intro {
     padding-top: 5em;
@@ -151,7 +114,6 @@ footer {
   background-color: rgb(35, 34, 59);
   top: 60px;
 }
-
 .sidenav a {
     padding: 8px 8px 8px 8px;
     text-decoration: none;
@@ -160,11 +122,9 @@ footer {
     display: block;
     transition: 0.3s;
 }
-
 .sidenav a:hover {
     color: #f1f1f1;
 }
-
 /*--------------------Rating stars -----------------------------*/
 .rating-block{
 	border:none;
