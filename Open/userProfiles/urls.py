@@ -11,4 +11,6 @@ urlpatterns = [
     url(r'^change-password/$', views.change_password, name='change_password'),
     url(r'^other_users/$', views.other_users, name='other_users'),
     url(r'^other_users/(?P<pk>\d+)/$', views.other_users, name='other_users_with_pk'),
+    url(r'^user_questionnaire/$', views.user_questionnaire, name='user_questionnaire'),
+
 ]

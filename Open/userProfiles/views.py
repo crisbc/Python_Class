@@ -28,6 +28,11 @@ def other_users(request, pk=None):
     return render(request, 'userProfiles/otherUsers.html', args)
 
 
+def user_questionnaire(request):
+
+    return render(request, 'userProfiles/questionnaire.html')
+
+
 @login_required
 def post_new(request):
     form = InterestsForm(request.POST, instance=request.user)
