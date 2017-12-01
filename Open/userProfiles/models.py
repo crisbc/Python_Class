@@ -8,6 +8,19 @@ class UserProfile(models.Model):
     user = models.OneToOneField(User)
     #preference = models.CharField(max_length=50) #looking for male or female
     interest_type = models.ManyToManyField('Interests', blank=True)
+    user_location = models.CharField(max_length=250,default='Any', editable=False)
+    FEMALE = 'FM'
+    MALE = 'ML'
+    USER_Gender_CHOICES = (
+        (FEMALE, 'Female'),
+        (MALE, 'Male'),
+    )
+    user_gender = models.CharField(
+        max_length=2,
+        choices=USER_Gender_CHOICES,
+        default=MALE,
+    )
+    user_birthday = models.DateField(blank=True, null=True)
 
 
 def create_profile(sender, **kwargs):
