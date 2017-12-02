@@ -16,17 +16,13 @@
             <div class="row">
                 <div class="col-md-2">
                     <div class="requests">
-                        <h1>Requests</h1>
-                        {% for user in matchedUsers %}
-                        <a href="{% url 'userProfiles:other_users_with_pk' pk=user.pk %}">
-                            <h2>user.username</h2></a>
-                        {% endfor %}
+                        <!-- currently just shows all users -->
+                        {% include 'matchedUsers.html' %}
                     </div>
                 </div>
                 <div class="col-md-8">
                     <div class="requests">
                         {% include 'profilePreview.html' %}
-                        
                     </div>
                 </div>
                 <div class="col-md-2">
