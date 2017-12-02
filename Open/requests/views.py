@@ -6,14 +6,17 @@ from django.contrib.auth.models import User
 
 # Create your views here.
 @login_required
-def index(request):
-    args = {'user': request.user}
+def index(request, pk=None):
+    #args = {'user': request.user}
+    #return render(request, 'requests/requests.html', args)
+    users = User.objects.exclude(id=request.user.id)
+    if pk:
+       user = User.objects.get(pk=pk)
+    else:
+        user = request.user
+    args = {'user': user, 'users': users}
     return render(request, 'requests/requests.html', args)
 @login_required
 def sendRequest(request):
     args = {'user': request.user}
     return render(request, 'requests/sendRequest.html', args)
-@login_required
-def profilePreview(request):
-    args= {'user': request.user}
-    return render(request, 'requests/profilePreview.html', args)
