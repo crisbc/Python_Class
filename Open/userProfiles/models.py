@@ -6,9 +6,9 @@ from django.db.models.signals import post_save
 
 class UserProfile(models.Model):
     user = models.OneToOneField(User)
-    #preference = models.CharField(max_length=50) #looking for male or female
+
     interest_type = models.ManyToManyField('Interests', blank=True)
-    user_location = models.CharField(max_length=250,default='Any', editable=False)
+    user_location = models.CharField(max_length=250,default='Any', editable=True)
     FEMALE = 'FM'
     MALE = 'ML'
     USER_Gender_CHOICES = (

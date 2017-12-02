@@ -5,7 +5,7 @@ from django.contrib.auth import update_session_auth_hash
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 #from .models import Interests
-from .forms import InterestsForm
+from .forms import InterestsForm, UserForm
 # Create your views here.
 # @login required doesnt allow user to access particular view if not authenticated
 
@@ -29,10 +29,22 @@ def other_users(request, pk=None):
 
 
 def user_questionnaire(request):
+    try: profile = request.user.userprofile
+    except UserProfile.DoesNotExist:
+        profile = UserProfile(user=request.user)
 
-    return render(request, 'userProfiles/questionnaire.html')
+    if request.method == 'POST':
+        form = UserForm(request.POST, instance=profile)
+        if form.is_valid():
+            form.save()
+            return redirect('/userProfiles')
+    else:
+        form = UserForm(instance=profile)
+        args = {'form': form}
+        return render(request, 'userProfiles/questionnaire.html', args)
 
 
+# This view is for Interests form
 @login_required
 def post_new(request):
     form = InterestsForm(request.POST, instance=request.user)
