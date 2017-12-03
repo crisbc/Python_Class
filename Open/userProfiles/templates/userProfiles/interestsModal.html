@@ -19,7 +19,7 @@
         <div class="col-md-10 text-center">
 {% block content %}
     <h1>What are your Interests?</h1>
-    <form action="{% url 'userProfiles:post_new' %}" method="POST" class="post-form">
+    <form method="POST" >
         {% csrf_token %}
         {{ form }}
         <br><button type="submit" class="save btn btn-default">Submit</button>

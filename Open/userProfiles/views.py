@@ -47,19 +47,19 @@ def user_questionnaire(request):
 # This view is for Interests form
 @login_required
 def post_new(request):
-    form = InterestsForm(request.POST, instance=request.user)
-    if form.is_valid():
-        interest_typ = form.save(commit=False)
-        interest_typ.user = request.user
-        #selected_interests = form.cleaned_data['interest_type']
-        interest_typ.save()
-        form.save_m2m()
+    try: profile = request.user.userprofile
+    except UserProfile.DoesNotExist:
+        profile = UserProfile(user=request.user)
 
-        form = InterestsForm()
-        return redirect('/userProfiles')
-
-    args = {'form': form }
-    return render(request, 'userProfiles/interestsModal.html', args)
+    if request.method == 'POST':
+        form = InterestsForm(request.POST, instance=profile)
+        if form.is_valid():
+            form.save()
+            return redirect('/userProfiles')
+    else:
+        form = InterestsForm(instance=profile)
+        args = {'form': form}
+        return render(request, 'userProfiles/interestsModal.html', args)
 
 
 @login_required

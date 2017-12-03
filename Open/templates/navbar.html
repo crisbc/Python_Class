@@ -18,11 +18,17 @@
         {% if user.is_authenticated %}
             <div class="collapse navbar-collapse" id="topNavBar">
                    <ul class="nav navbar-nav navbar-right">
-                    <li class="">
+                     <li class="">
+                        <a href="{% url 'userProfiles:index' %}">
+                            <span class="glyphicon glyphicon-user" aria-hidden="true"></span> My Profile
+                        </a>
+                    </li>
+                       <li class="">
                         <a href="{% url 'accounts:logout' %}">
                             <span class="glyphicon glyphicon-off" aria-hidden="true"></span>&nbsp; Logout
                         </a>
                     </li>
+
                 </ul>
             </div>
      {% else %}

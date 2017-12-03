@@ -1,4 +1,4 @@
-<div class="container-fluid" style="background-color:WhiteSmoke ;" >
+<div class="container-fluid" style="background-color:WhiteSmoke ;" xmlns="http://www.w3.org/1999/html">
   <div class="row ">
     <div class="col-sm-6">
                     <div class="text-center" >
@@ -26,12 +26,13 @@
     </div>
     <div class="col-sm-6 " style="background-color:WhiteSmoke ;">
         <div class="text-left">
-            <h1>Name:{{ user.first_name }}{{user}}</h1>
-            <h1>Last:{{ user.last_name }}</h1>
-            <h4 ><strong>Location: </strong> Placeholder</h4>
-            <h4><strong>Sex: </strong>Placeholder </h4>
-            <h4><strong>Age: </strong>Placeholder</h4>
-            <h4><strong>Email:</strong>{{user.email}}</h4>
+            <li> <h2>Username:<strong>{{user}}</strong></h2></li>
+            <h2>Name:{{ user.first_name }}</h2>
+            <h2>Last:{{ user.last_name }}</h2>
+            <h4 >Location: <strong> {{ user.userprofile.user_location }}</strong></h4>
+            <h4>Sex: <strong>{{ user.userprofile.user_gender }}</strong> </h4>
+            <h4>Birthday: <strong>{{ user.userprofile.user_birthday }}</strong></h4>
+            <h4>Email:<strong>{{user.email}}</strong></h4>
 
             <a href="{% url 'userProfiles:edit_userinfo' %}" class="btn btn-info" role="button">Edit</a>
         </div>

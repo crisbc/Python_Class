@@ -36,13 +36,7 @@ class Interests(models.Model):
     #user_details = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
     userInterests = models.CharField(max_length=250)
     chosen_Interests = models.BooleanField(default=False)
-# def_str returns the names of items in database
+    # def_str returns the names of items in database
 
     def __str__(self):
         return self.userInterests
-
-#def __str__(self):
- #      return self.user + ' - ' + self.interest_type
-
-    #def __str__(self):
-     #   return self.interestsMatched + ' - ' + self.userMatched
