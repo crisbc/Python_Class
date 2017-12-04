@@ -6,7 +6,6 @@ from django.db.models.signals import post_save
 
 class UserProfile(models.Model):
     user = models.OneToOneField(User)
-
     interest_type = models.ManyToManyField('Interests', blank=True)
     user_location = models.CharField(max_length=250,default='Any', editable=True)
     FEMALE = 'FM'
@@ -21,7 +20,8 @@ class UserProfile(models.Model):
         default=MALE,
     )
     user_birthday = models.DateField(blank=True, null=True)
-
+    user_gender_pref = models.ManyToManyField('GenderPreference', blank=True)
+    partner_location_preference = models.CharField(max_length=250,default='Any', editable=True)
 
 def create_profile(sender, **kwargs):
     if kwargs['created']:
@@ -33,9 +33,14 @@ post_save.connect(create_profile, sender=User)
 
 class Interests(models.Model):
     userInterests = models.CharField(max_length=250)
-    chosen_Interests = models.BooleanField(default=False)
     #user_details = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
     # def_str returns the names of items in database
 
     def __str__(self):
         return self.userInterests
+
+class GenderPreference(models.Model):
+    gender_pref_choice = models.CharField(max_length=250)
+
+    def __str__(self):
+        return self.gender_pref_choice
