@@ -7,25 +7,14 @@
   <h3>My Interests</h3>
            <div class="page-header">
     <a href="{% url 'userProfiles:post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span>Edit Interests</a>
+
+
 </div>
   <table class="table">
-    <thead>
-      <tr>
-        <th></th>
-        <th></th>
-        <th></th>
-      </tr>
-    </thead>
+    {% for selected in user.userprofile.interest_type.all %}
     <tbody>
       <tr>
-        <td>Placerholder</td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>{{ selected }}{% endfor %}</td>
       </tr>
     </tbody>
   </table>

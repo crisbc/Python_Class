@@ -31,11 +31,10 @@ def create_profile(sender, **kwargs):
 post_save.connect(create_profile, sender=User)
 
 
-
 class Interests(models.Model):
-    #user_details = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
     userInterests = models.CharField(max_length=250)
     chosen_Interests = models.BooleanField(default=False)
+    #user_details = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
     # def_str returns the names of items in database
 
     def __str__(self):
