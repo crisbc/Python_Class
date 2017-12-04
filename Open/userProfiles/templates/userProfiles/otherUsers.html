@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
         <meta charset="UTF-8">
-        <title>{%  block title %}Users{% endblock %}</title>
+        <title>{%  block title %}Browse Users{% endblock %}</title>
         {% load static %}
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
        <link rel="stylesheet" href="{% static 'css/style.css' %}">
@@ -18,7 +18,7 @@
 {%include 'navbar.html'%}
 <div class="container-fluid">
     <div class="row">
-        <div class="col-md-1">
+        <div class="col-md-2">
              <h3>Browse Users</h3>
     {% for user in users%}
         <a href="{% url 'userProfiles:other_users_with_pk' pk=user.pk %}">
@@ -28,11 +28,11 @@
 
 
         </div>
-        <div class="col-md-9">
-        {% include 'userInfo.html' %}
+        <div class="col-md-8">
+        {% include 'otherUsersInfo.html' %}
         </div>
         <div class="col-md-2">
-{% include 'profileSideNav.html' %}
+{% include 'profileSideNav2.html' %}
 
         </div>
     </div>

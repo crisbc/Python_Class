@@ -1,0 +1,79 @@
+<div class="container-fluid" style="background-color:WhiteSmoke ;" xmlns="http://www.w3.org/1999/html">
+  <div class="row ">
+    <div class="col-sm-6">
+                    <div class="text-center" >
+                        <img src="../../../static/images/generic.png" class="img-circle" alt="Generic pic" width="300" height="300" >
+                    </div>
+                <div class="text-center">
+				<div class="rating-block">
+					<button type="button" class="btn btn-warning btn-sm" aria-label="Left Align">
+					  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+					</button>
+					<button type="button" class="btn btn-warning btn-sm" aria-label="Left Align">
+					  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+					</button>
+					<button type="button" class="btn btn-warning btn-sm" aria-label="Left Align">
+					  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+					</button>
+					<button type="button" class="btn btn-default btn-grey btn-sm" aria-label="Left Align">
+					  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+					</button>
+					<button type="button" class="btn btn-default btn-grey btn-sm" aria-label="Left Align">
+					  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+					</button>
+				</div>
+            </div>
+    </div>
+    <div class="col-sm-6 " style="background-color:WhiteSmoke ;">
+        <div class="text-left">
+            <li> <h2>Username:<strong>{{user}}</strong></h2></li>
+            <h2>Name:{{ user.first_name }}</h2>
+            <h2>Last:{{ user.last_name }}</h2>
+            <h4 >Location: <strong> {{ user.userprofile.user_location }}</strong></h4>
+            <h4>Sex: <strong>{{ user.userprofile.user_gender }}</strong> </h4>
+            <h4>Birthday: <strong>{{ user.userprofile.user_birthday }}</strong></h4>
+            <h4>Email:<strong>{{user.email}}</strong></h4>
+
+            <a href="{% url 'userProfiles:edit_userinfo' %}" class="btn btn-info" role="button">Edit</a>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+<!--
+<div class="container-fluid">
+    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#popUpWindow"> Edit interests</button>
+
+    <div class="modal fade" id="popUpWindow">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <img src="../static/images/Open225x256.png" class="img-rounded" alt="open" >
+                    <h3 class="modal-title">What Are Your Interests?</h3>
+                </div>
+
+                <div class="modal-body">
+
+                    <p>Hello</p>
+                     {% for post in posts %}
+                        <h4>{{ post }}</h4> <br>
+                     {% endfor %}
+
+                </div>
+
+                <div class="modal-footer">
+                <button type="button" class="btn">Submit</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</div>
+-->
+
