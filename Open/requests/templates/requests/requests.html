@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
             <meta charset="UTF-8">
-            <title>{%  block title %}Home{% endblock %}</title>
+            <title>{%  block title %}Requests{% endblock %}</title>
             {% load static %}
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
             <link rel="stylesheet" href="{% static 'css/style.css' %}">
@@ -14,9 +14,8 @@
         {%include 'navbar.html'%}
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-2">
-                    <div class="requests">
-                        <!-- currently just shows all users -->
+                <div class="col-md-2" >
+                    <div class="requests" style="overflow:auto">
                         {% include 'matchedUsers.html' %}
                     </div>
                 </div>

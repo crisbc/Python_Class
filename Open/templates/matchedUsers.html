@@ -1,12 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
     <div>
-        <h1>Requests</h1>
-        <!-- once we have a matching algorithm the loop with be for users in matched users
-        (people who requested a date with you will show) -->
+        <h3>Suggested Mathches</h2>
+        <!-- once we have a matching algorithm the loop with be for users in matched users-->
         {% for user in users %}
             <a href="{% url 'requests:matchedUsers' pk=user.pk %}">
-            <h3>{{user.username}}</h3></a>
+                <h4>{{ user.username }}</h3>
+            </a>
+            {% if not user in friends %}
+                <a href="{% url 'requests:sendRequest' operation='add' pk=user.pk %}">
+                    <button type="button" class="btn btn-success">Send Request</button>
+                </a>
+            {% endif %}
+        {% endfor %}
+        <h3>Requests</h3>
+        <!-- (people who requested a date with you will show) -->
+        {% for friend2 in friends %}
+            <a href="{% url 'requests:matchedUsers' pk=friend.pk %}">
+                <h4>{{ friend.username }}</h3>
+            </a>
+            <a href="{% url 'requests:sendRequest' operation='remove' pk=friend.pk %}">
+                <button type="button" class="btn btn-default">Cancel Request</button>
+            </a>
         {% endfor %}
     </div>
 </html>
