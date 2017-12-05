@@ -26,6 +26,6 @@ Cristina, Marcus, Levi, Jackie
 ### 	In progress-reply date
 ###	  -rate date
 ## -Messages
-In progress-send and recieve messages from dates
+### In progress-send and recieve messages from dates
 
 
