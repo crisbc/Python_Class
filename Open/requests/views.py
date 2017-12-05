@@ -8,11 +8,13 @@ from requests.models import Request
 @login_required
 def index(request, pk=None):
     users = User.objects.exclude(id=request.user.id)
+    dateRequest=Request.objects.get(current_user=request.user)
+    friends=dateRequest.users.all()
     if pk:
         user = User.objects.get(pk=pk)
     else:
         user = request.user
-    args = {'user': user, 'users': users}
+    args = {'user': user, 'users': users, 'friends': friends}
     return render(request, 'requests/requests.html', args)
 @login_required
 def sendRequest(request, operation, pk=None):
