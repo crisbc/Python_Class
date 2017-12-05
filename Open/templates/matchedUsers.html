@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <div>
-        <h3>Suggested Mathches</h2>
+        <h3>Suggested Matches</h2>
         <!-- once we have a matching algorithm the loop with be for users in matched users-->
         {% for user in users %}
             <a href="{% url 'requests:matchedUsers' pk=user.pk %}">
