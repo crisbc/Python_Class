@@ -13,9 +13,9 @@ Cristina, Marcus, Levi, Jackie
 ### Working -age pref
 ### Complete-location pref
 ### Complete -m/f pref	
-###Complete - edit user info
-###Complete - edit user password
-###Complete/but need to fix error - Browse other users
+### Complete - edit user info
+### Complete - edit user password
+### Complete/but need to fix error - Browse other users
 ## Search
 ###   -interests algorithm
 ###	  -age pref
