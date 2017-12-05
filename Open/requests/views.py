@@ -8,7 +8,11 @@ from requests.models import Request
 @login_required
 def index(request, pk=None):
     users = User.objects.exclude(id=request.user.id)
-    dateRequest=Request.objects.get(current_user=request.user)
+    try:
+        dateRequest=Request.objects.get(current_user=request.user)
+    except:
+        Request.objects.create(current_user=request.user)
+        dateRequest=Request.objects.get(current_user=request.user)
     friends=dateRequest.users.all()
     if pk:
         user = User.objects.get(pk=pk)
