@@ -1,3 +1,3 @@
 
 *.pyc
-Open/db.sqlite3
+/db/*.sqlite3
