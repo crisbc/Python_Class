@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'accounts',
     'userProfiles',
     'requests',
+    'directmessages',
+    'Messages',
 ]
 
 MIDDLEWARE = [

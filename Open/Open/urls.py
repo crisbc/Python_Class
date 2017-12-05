@@ -35,8 +35,11 @@ urlpatterns = [
     # User auth urls
     # url(r'^register/$', views.UserFormRegisterView.as_view(), name='register'),
     url(r'^accounts/', include('accounts.urls', app_name='accounts', namespace='accounts')),
+
+    #Msesages
+    url(r'^Messages/', include('Messages.urls', app_name='Messages', namespace='Messages')),
+
 ]
 
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-
